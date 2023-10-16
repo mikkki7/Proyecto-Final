@@ -1,0 +1,40 @@
+
+.main-index{
+    display: inline-block;
+    padding-top: 100px;
+    .contenedor-index{
+        .titulo{
+            @extend %titulo-general;
+            color: map-get($color, quinario);
+            margin: 100px;
+        }
+            .seccion-index{
+                @include flex(flex, row, space-around, none, wrap);
+                gap: 10px;
+                margin-left: 20px;
+                .texto-foto{
+                    @extend %texto-foto;
+                    color: $negro;
+                    .imagen{
+                        @extend %estilo-imagen;
+                        border-color: map-get($color, secundario);
+                    }
+                }
+            }
+    }
+        .rectangulo2{
+            @extend %estilo-ver-mas;
+            background-color: $blanco;
+            margin: 50px 500px;
+            .ver_mas{
+                list-style-type: none;
+                text-decoration: none;
+                color: map-get($color, quinario);
+                .texto-ver-mas{
+                    @include flex(flex, row, center, center, wrap);
+                    font-weight: 600;
+                    margin-top: 10px;
+                }
+            }
+        }
+}

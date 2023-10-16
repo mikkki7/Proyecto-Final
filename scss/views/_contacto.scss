@@ -1,0 +1,71 @@
+
+.body-contacto{
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 10% auto 10%;
+    grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer"
+    ;
+    .main-contacto{
+        grid-area: main;
+        .contenedor-formulario{
+            @include flex(flex, row, center, none, nowrap);
+            margin-top: 100px;
+            .formulario{
+                .inputs-datos{
+                    margin-bottom: 35px;
+                    .subtitulos-formulario{
+                        color: map-get($color, terciario);
+                        text-decoration: underline;
+                        margin-bottom: 5px;
+                    }
+                    .contenedor-inputs{
+                        .ingreso-datos{
+                            width: 80%;
+                        }
+                    }
+                }
+            .contenedor-boton-enviar{
+                .boton-enviar{
+                    background-color: transparent;
+                    color: map-get($color, terciario);
+                    border: 3px solid #4f88d0;
+                    border-radius: 20px;
+                    margin-top: 35px;
+                    margin-left: 60px;
+                    padding: 10px;
+                    @include flex(flex, row, center, none, nowrap);
+                }
+            }
+            }
+        }
+    }
+    .aside{
+        grid-area: aside;
+        background-color: map-get($color, secundario);
+        border-right: 3px solid #2465aa;
+        height: 100%;
+        .contenedor-contacto{
+            margin-bottom: 50px;
+            .contenedor-TiCo{
+                .titulo-contacto{
+                    font-size: xx-large;
+                    text-decoration: underline;
+                    color: $negro;
+                    margin-top: 100px;
+                    margin-left: 35px;
+                }
+            }
+            .contenedor-TeCo{
+                .texto-contacto{
+                    font-size: large;
+                    line-height: 30px;
+                    margin-top: 25px;
+                    margin: 30px;
+                }
+            }
+        }
+    }
+}

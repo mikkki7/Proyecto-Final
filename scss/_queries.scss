@@ -1,0 +1,185 @@
+/*Media Queries Inicio*/
+@media (min-width: 320px) and (max-width: 480px) {
+    .main-index{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 175px;
+        .contenedor-index{
+            display: flex;
+            flex-wrap: wrap;
+            .contenedor-titulo{
+                .titulo{
+                    margin: 75px 0px;
+                }
+            }
+            .seccion-index{
+                display: flex;
+                justify-content: center;
+                margin-left: 0px;
+            }
+        }
+        .rectangulo2{
+            margin: 50px 0px 50px 35px;
+        }
+    }
+}
+
+/*Media Queries Productos*/
+@media (min-width: 320px) and (max-width: 480px) {
+    .body-productos{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+        "header"
+        "aside"
+        "main"
+        "footer"
+        ;
+        .main-productos{
+            .contenedor-titulo{
+                .titulo{
+                    margin-bottom: 125px;
+                }
+            }
+            .seccion-productos{
+                margin: 0px;
+            }
+            .rectangulo2-productos{
+                margin: 50px 0px;
+            }
+        }
+        .aside{
+            padding-top: 175px;
+            border-right: none;
+            border-bottom: 3px solid #2465aa;
+            .contenedor-categorias{
+                margin-top: 75px;
+            }
+            .contenedor-precios{
+                margin-bottom: 100px;
+            }
+        }
+    }
+}
+
+/*Media Queries Servicios*/
+@media (min-width: 320px) and (max-width: 480px){
+    .main-servicios{
+        padding-top: 180px;
+        .contenedor-titulo{
+            margin: 0px;
+            .titulo-servicios{
+                margin-top: 100px;
+            }
+        }
+        .contenedor-articulos{
+            .articulo{
+                flex-direction: column-reverse;
+                margin-top: 50px;
+                justify-content: none;
+                .contenedor-texto{
+                    width: 100%;
+                    margin-left: 10px;
+                    .subtitulo-servicios{
+                        .texto-servicios{
+                            font-size: medium;
+                        }
+                    }
+                }
+                .imagen-servicios{
+                    width: 250px;
+                    margin-left: 30px;
+                    margin-bottom: 50px;
+                }
+            }
+            .articulo2{
+                flex-direction: column-reverse;
+                margin-top: 50px;
+                justify-content: none;
+                .contenedor-texto2{
+                    width: 100%;
+                    margin-left: 10px;
+                }
+                .imagen-servicios2{
+                    width: 250px;
+                    margin-left: 30px;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
+/*Media Queries Contacto*/
+@media (min-width: 320px) and (max-width: 480px){
+    .body-contacto{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+        "header"
+        "aside"
+        "main"
+        "footer"
+        ;
+        .main-contacto{
+            .contenedor-formulario{
+                margin-top: 65px;
+                .formulario{
+                    margin-left: 50px;
+                }
+                .contenedor-boton-enviar{
+                    .boton-enviar{
+                        margin-bottom: 60px;
+                    }
+                }
+            }
+        }
+        .aside{
+            padding-top: 150px;
+            border-right: none;
+            border-bottom: 3px solid #2465aa;
+        }
+    }
+}
+
+/*Media Queries Ubicacion*/
+@media (min-width: 320px) and (max-width: 480px){
+    .main-ubicacion{
+        padding-top: 200px;
+        .contenedor-titulo{
+            .titulo{
+                font-size: xx-large;
+                margin: 0px 3px;
+            }
+        }
+        .contenedor-ubicacion{
+            .texto-ubicacion{
+                .contendor-TiUb{
+                    .subtitulo-ubicacion{
+                        margin-bottom: 0px;
+                    }
+                }
+                .contenedor-TeUb{
+                    .texto-lista{
+                        margin: 30px 0px;
+                            .texto-sublista{
+                                padding-left: 15px;
+                                .sublista-horario{
+                                    margin-left: 25px;
+                                    margin-top: 10px;
+                                }
+                            }
+                    }
+                }
+            }
+            .iframes{
+                .mapa{
+                    height: 250px;
+                    width: auto;
+                }
+            }
+        }
+    }
+}

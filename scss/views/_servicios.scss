@@ -1,0 +1,59 @@
+.main-servicios{
+    padding-top: 200px;
+    margin-bottom: 50px;
+    .titulo-servicios{
+        @extend %titulo-general;
+        color: map-get($color, quinario);
+    }
+        .articulo{
+            @include flex(flex, row, space-between, none, wrap);
+            margin-top: 175px;
+            margin-bottom: 100px;
+            .contenedor-texto{
+                margin: 0px 25px;
+                width: 40%;
+                .subtitulo-servicios{
+                    color: map-get($color, terciario);
+                    text-decoration: underline;
+                    text-align: start;
+                }
+                .texto-servicios{
+                    font-size: large;
+                    margin-top: 50px;
+                    line-height: 30px;
+                }
+            }
+            .imagen-servicios{
+                @extend %estilo-imagen;
+                border-color: map-get($color, secundario);
+                margin-right: 25px;
+                width: 40%;
+            }
+        }
+        .articulo2{
+            @include flex(flex, row-reverse, space-between, none, wrap);
+            margin-top: 175px;
+            margin-bottom: 100px;
+            .contenedor-texto2{
+                width: 40%;
+                margin-right: 150px;
+                .subtitulo-servicios{
+                    color: map-get($color, terciario);
+                    text-decoration: underline;
+                    text-align: start;
+                }
+                .texto-servicios{
+                    font-size: large;
+                    margin-top: 50px;
+                    line-height: 30px;
+                }
+            }
+            .imagen-servicios2{
+                width: 40%;
+                @extend %estilo-imagen;
+                border-color: map-get($color, secundario);
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+        }
+}
