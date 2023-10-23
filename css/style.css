@@ -361,6 +361,8 @@
 .main-ubicacion .contenedor-ubicacion .texto-ubicacion .contenedor-TiUb .subtitulo-ubicacion {
   font-size: x-large;
   text-decoration: underline;
+  margin-top: 10px;
+  margin-bottom: 0px;
   color: #2465aa;
 }
 .main-ubicacion .contenedor-ubicacion .texto-ubicacion .contenedor-TeUb .texto-lista {

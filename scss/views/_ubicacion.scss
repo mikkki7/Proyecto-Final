@@ -20,6 +20,8 @@
                 .subtitulo-ubicacion{
                     font-size: x-large;
                     text-decoration: underline;
+                    margin-top: 10px;
+                    margin-bottom: 0px;
                     color: map-get($color, quinario);
                 }
             }
