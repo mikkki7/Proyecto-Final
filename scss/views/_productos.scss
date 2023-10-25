@@ -7,65 +7,70 @@
         "aside main"
         "footer footer"
     ;
-    .main-productos {
+    .main-productos{
         grid-area: main;
         @include flex(flex, row, center, none, wrap);
         padding-top: 100px;
-        .titulo{
-            @extend %titulo-general;
-            color: map-get($color, quinario);
-            margin-bottom: 100px;
+        .contenedor-titulo{
+            .titulo{
+                @extend %titulo-general;
+                color: map-get($color, quinario);
+                margin-bottom: 100px;
+            }
         }
-        .seccion-productos {
+        .seccion-productos{
             @include flex(flex, row, space-around, none, wrap);
             gap: 10px;
             margin-left: 20px;
             margin-bottom: 50px;
-            .texto-foto{
-                @extend %texto-foto;
-                color: $negro;
-                .imagen{
-                    @extend %estilo-imagen;
-                    border-color: map-get($color, secundario);
+                .texto-foto{
+                    @extend %texto-foto;
+                    color: $negro;
+                    .imagen{
+                        @extend %estilo-imagen;
+                        border-color: map-get($color, secundario);
+                    }
+                }
+        }
+        .contenedor-boton{
+            @include flex(flex, row, center, none, wrap);
+            margin: 50px 0px;
+            .rectangulo2-productos{
+                @extend %estilo-ver-mas;
+                background-color: $blanco;
+                .ver_mas{
+                    list-style-type: none;
+                    text-decoration: none;
+                    color: map-get($color, cuartenario);
+                .texto-ver-mas{
+                    @include flex(flex, row, center, center, nowrap);
+                    font-weight: 600;
+                    margin-top: 10px;
+                }
                 }
             }
         }
-        .rectangulo2-productos {
-            @extend %estilo-ver-mas;
-            background-color: $blanco;
-            margin: 50px 375px 50px 375px;
-            .ver_mas{
-                list-style-type: none;
-                text-decoration: none;
-                color: map-get($color, quinario);
-            .texto-ver-mas{
-                @include flex(flex, row, center, center, nowrap);
-                font-weight: 600;
-                margin-top: 10px;
-            }
-            }
-        }
     }
-    .aside {
+    .aside{
         height: 100%;
         background-color: map-get($color, secundario);
         grid-area: aside;
-        border-right: 3px solid #2465aa;
-        .contenedor-categorias {
+        border-right: $borde-azul;
+        .contenedor-categorias{
             margin-top: 110px;
             .subtitulo-categorias{
                 text-decoration: underline;
                 margin-left: 20px;
                 margin-top: 50px;
             }
-            .contenedor-lista-categorias {
+            .contenedor-lista-categorias{
                 margin-top: 30px;
-                .lista-categorias {
+                .lista-categorias{
                     list-style-type: none;
                     color: $negro;
                     margin-left: 15px;
                     margin-bottom: 10px;
-                    .texto-categorias {
+                    .texto-categorias{
                         text-decoration: underline;
                         color: rgb(12, 12, 12);
                     }
@@ -78,18 +83,18 @@
                 margin-left: 20px;
                 margin-top: 50px;
             }
-            .input-precios {
+            .input-precios{
                 width: 150px;
                 margin-top: 20px;
                 margin-left: 20px;
                 @include flex(flex, column, none, none, nowrap);
-                .input-minimo {
+                .input-minimo{
                     margin-top: 10px;
                     margin-bottom: 10px;
-                    border: 3px solid rgb(12, 12, 12);
+                    border: $borde-negro;
                 }
-                .input-maximo {
-                    border: 3px solid rgb(12, 12, 12);
+                .input-maximo{
+                    border: $borde-negro;
                 }
             }
         }

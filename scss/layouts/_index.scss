@@ -26,8 +26,7 @@
             }
         }
         .contenedor-boton{
-            display: flex;
-            justify-content: center;
+            @include flex(flex, row, center, none, wrap);
             margin: 50px 0px;
             .rectangulo2{
                 @extend %estilo-ver-mas;
@@ -35,7 +34,7 @@
                 .ver_mas{
                     list-style-type: none;
                     text-decoration: none;
-                    color: map-get($color, quinario);
+                    color: map-get($color, cuartenario);
                     .texto-ver-mas{
                         @include flex(flex, row, center, center, wrap);
                         font-weight: 600;

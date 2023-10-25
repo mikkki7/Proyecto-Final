@@ -1,6 +1,6 @@
-/*Header Index*/
+
 .header{
-    border-bottom: 3px solid #2465aa;
+    border-bottom: $borde-azul;
     grid-area: header;
     position: fixed;
     width: 100%;

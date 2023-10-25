@@ -1,7 +1,7 @@
 
 .body-contacto{
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 25% 75%;
     grid-template-rows: 10% auto 10%;
     grid-template-areas:
     "header header"
@@ -10,9 +10,17 @@
     ;
     .main-contacto{
         grid-area: main;
+        .contenedor-TiCo{
+            .titulo-contacto{
+                @extend %titulo-general;
+                color: map-get($color, quinario);
+                margin-top: 100px;
+            }
+        }
         .contenedor-formulario{
-            @include flex(flex, row, center, none, nowrap);
+            @include flex(flex, row, space-between, none, nowrap);
             margin-top: 100px;
+            margin-left: 100px;
             .formulario{
                 .inputs-datos{
                     margin-bottom: 35px;
@@ -23,38 +31,43 @@
                     }
                     .contenedor-inputs{
                         .ingreso-datos{
-                            width: 80%;
+                            width: 325%;
+                            padding: 10px;
+                            background-color: transparent;
+                            border: $borde-boton;
+                            border-radius: 15px
                         }
                     }
                 }
-            .contenedor-boton-enviar{
+            }
+        }
+    }
+        .contenedor-Bot-En{
+            @include flex(flex, row, center, none, wrap);
+            .rectangulo-Bot-En{
                 .boton-enviar{
                     background-color: transparent;
                     color: map-get($color, terciario);
-                    border: 3px solid #4f88d0;
+                    border: $borde-boton;
                     border-radius: 20px;
-                    margin-top: 35px;
-                    margin-left: 60px;
                     padding: 10px;
                     @include flex(flex, row, center, none, nowrap);
                 }
             }
-            }
         }
-    }
     .aside{
         grid-area: aside;
         background-color: map-get($color, secundario);
-        border-right: 3px solid #2465aa;
+        border-right: $borde-azul;
         height: 100%;
         .contenedor-contacto{
             margin-bottom: 50px;
-            .contenedor-TiCo{
-                .titulo-contacto{
+            .contenedor-SubTiCo{
+                .subtitulo-contacto{
                     font-size: xx-large;
                     text-decoration: underline;
                     color: $negro;
-                    margin-top: 100px;
+                    margin-top: 50px;
                     margin-left: 35px;
                 }
             }

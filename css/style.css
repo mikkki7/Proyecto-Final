@@ -1,4 +1,4 @@
-.main-ubicacion .contenedor-titulo .titulo, .main-servicios .titulo-servicios, .body-productos .main-productos .titulo, .main-index .contenedor-index .contenedor-titulo .titulo {
+.main-ubicacion .contenedor-titulo .titulo, .body-contacto .main-contacto .contenedor-TiCo .titulo-contacto, .main-servicios .titulo-servicios, .body-productos .main-productos .contenedor-titulo .titulo, .main-index .contenedor-index .contenedor-titulo .titulo {
   text-align: center;
   font-size: xx-large;
   text-decoration: underline;
@@ -17,8 +17,8 @@
   margin-top: 20px;
 }
 
-.body-productos .main-productos .rectangulo2-productos, .main-index .contenedor-index .contenedor-boton .rectangulo2 {
-  border: 3px solid #2465aa;
+.body-productos .main-productos .contenedor-boton .rectangulo2-productos, .main-index .contenedor-index .contenedor-boton .rectangulo2 {
+  border: 3px solid #3a76bd;
   height: 50px;
   width: 250px;
   border-radius: 20px;
@@ -34,7 +34,6 @@
   box-sizing: border-box;
 }
 
-/*Header Index*/
 .header {
   border-bottom: 3px solid #2465aa;
   grid-area: header;
@@ -78,7 +77,10 @@
 }
 .main-index .contenedor-index .contenedor-boton {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: none;
+  flex-wrap: wrap;
   margin: 50px 0px;
 }
 .main-index .contenedor-index .contenedor-boton .rectangulo2 {
@@ -87,7 +89,7 @@
 .main-index .contenedor-index .contenedor-boton .rectangulo2 .ver_mas {
   list-style-type: none;
   text-decoration: none;
-  color: #2465aa;
+  color: #3a76bd;
 }
 .main-index .contenedor-index .contenedor-boton .rectangulo2 .ver_mas .texto-ver-mas {
   display: flex;
@@ -124,7 +126,7 @@
   flex-wrap: wrap;
   padding-top: 100px;
 }
-.body-productos .main-productos .titulo {
+.body-productos .main-productos .contenedor-titulo .titulo {
   color: #2465aa;
   margin-bottom: 100px;
 }
@@ -144,16 +146,23 @@
 .body-productos .main-productos .seccion-productos .texto-foto .imagen {
   border-color: #6599e3;
 }
-.body-productos .main-productos .rectangulo2-productos {
-  background-color: white;
-  margin: 50px 375px 50px 375px;
+.body-productos .main-productos .contenedor-boton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: none;
+  flex-wrap: wrap;
+  margin: 50px 0px;
 }
-.body-productos .main-productos .rectangulo2-productos .ver_mas {
+.body-productos .main-productos .contenedor-boton .rectangulo2-productos {
+  background-color: white;
+}
+.body-productos .main-productos .contenedor-boton .rectangulo2-productos .ver_mas {
   list-style-type: none;
   text-decoration: none;
-  color: #2465aa;
+  color: #3a76bd;
 }
-.body-productos .main-productos .rectangulo2-productos .ver_mas .texto-ver-mas {
+.body-productos .main-productos .contenedor-boton .rectangulo2-productos .ver_mas .texto-ver-mas {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -280,20 +289,25 @@
 
 .body-contacto {
   display: grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: 25% 75%;
   grid-template-rows: 10% auto 10%;
   grid-template-areas: "header header" "aside main" "footer footer";
 }
 .body-contacto .main-contacto {
   grid-area: main;
 }
+.body-contacto .main-contacto .contenedor-TiCo .titulo-contacto {
+  color: #2465aa;
+  margin-top: 100px;
+}
 .body-contacto .main-contacto .contenedor-formulario {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: none;
   flex-wrap: nowrap;
   margin-top: 100px;
+  margin-left: 100px;
 }
 .body-contacto .main-contacto .contenedor-formulario .formulario .inputs-datos {
   margin-bottom: 35px;
@@ -304,15 +318,24 @@
   margin-bottom: 5px;
 }
 .body-contacto .main-contacto .contenedor-formulario .formulario .inputs-datos .contenedor-inputs .ingreso-datos {
-  width: 80%;
+  width: 325%;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid #3a76bd;
+  border-radius: 15px;
 }
-.body-contacto .main-contacto .contenedor-formulario .formulario .contenedor-boton-enviar .boton-enviar {
+.body-contacto .contenedor-Bot-En {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: none;
+  flex-wrap: wrap;
+}
+.body-contacto .contenedor-Bot-En .rectangulo-Bot-En .boton-enviar {
   background-color: transparent;
   color: #4f88d0;
-  border: 3px solid #4f88d0;
+  border: 2px solid #3a76bd;
   border-radius: 20px;
-  margin-top: 35px;
-  margin-left: 60px;
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -329,11 +352,11 @@
 .body-contacto .aside .contenedor-contacto {
   margin-bottom: 50px;
 }
-.body-contacto .aside .contenedor-contacto .contenedor-TiCo .titulo-contacto {
+.body-contacto .aside .contenedor-contacto .contenedor-SubTiCo .subtitulo-contacto {
   font-size: xx-large;
   text-decoration: underline;
   color: black;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: 35px;
 }
 .body-contacto .aside .contenedor-contacto .contenedor-TeCo .texto-contacto {
@@ -451,7 +474,7 @@
 /*Media Queries Servicios*/
 @media (min-width: 320px) and (max-width: 480px) {
   .main-servicios {
-    padding-top: 180px;
+    padding-top: 125px;
   }
   .main-servicios .contenedor-titulo {
     margin: 0px;
@@ -500,13 +523,18 @@
     grid-template-areas: "header" "aside" "main" "footer";
   }
   .body-contacto .main-contacto .contenedor-formulario {
+    justify-content: center;
     margin-top: 65px;
+    margin-left: 0px;
   }
-  .body-contacto .main-contacto .contenedor-formulario .formulario {
-    margin-left: 50px;
+  .body-contacto .main-contacto .contenedor-formulario .formulario .inputs-datos .contenedor-inputs .ingreso-datos {
+    width: 100%;
   }
-  .body-contacto .main-contacto .contenedor-formulario .contenedor-boton-enviar .boton-enviar {
-    margin-bottom: 60px;
+  .body-contacto .main-contacto .contenedor-Bot-En {
+    margin-bottom: 40px;
+  }
+  .body-contacto .main-contacto .contenedor-Bot-En .rectangulo-Bot-En .boton-enviar {
+    width: 250px;
   }
   .body-contacto .aside {
     padding-top: 150px;

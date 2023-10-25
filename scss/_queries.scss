@@ -66,7 +66,7 @@
 /*Media Queries Servicios*/
 @media (min-width: 320px) and (max-width: 480px){
     .main-servicios{
-        padding-top: 180px;
+        padding-top: 125px;
         .contenedor-titulo{
             margin: 0px;
             .titulo-servicios{
@@ -125,13 +125,24 @@
         ;
         .main-contacto{
             .contenedor-formulario{
+                justify-content: center;
                 margin-top: 65px;
+                margin-left: 0px;
                 .formulario{
-                    margin-left: 50px;
+                    .inputs-datos{
+                            .contenedor-inputs{
+                                .ingreso-datos{
+                                    width: 100%;
+                                }
+                            }
+                    }
                 }
-                .contenedor-boton-enviar{
+            }
+            .contenedor-Bot-En{
+                margin-bottom: 40px;
+                .rectangulo-Bot-En{
                     .boton-enviar{
-                        margin-bottom: 60px;
+                        width: 250px;
                     }
                 }
             }
