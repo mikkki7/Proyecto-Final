@@ -50,7 +50,11 @@
 }
 
 .main-index {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: none;
+  flex-wrap: wrap;
   padding-top: 100px;
 }
 .main-index .contenedor-index .titulo {
@@ -63,7 +67,7 @@
   justify-content: space-around;
   align-items: none;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 50px;
   margin-left: 20px;
 }
 .main-index .contenedor-index .seccion-index .texto-foto {
