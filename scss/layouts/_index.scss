@@ -3,15 +3,18 @@
     @include flex(flex, column, center, none, wrap);
     padding-top: 100px;
     .contenedor-index{
-        .titulo{
-            @extend %titulo-general;
-            color: map-get($color, quinario);
-            margin: 100px;
+        .contenedor-titulo{
+            .titulo{
+                @extend %titulo-general;
+                color: map-get($color, quinario);
+                margin: 100px;
+            }
         }
-            .seccion-index{
-                @include flex(flex, row, space-around, none, wrap);
-                gap: 50px;
-                margin-left: 20px;
+        .seccion-index{
+            @include flex(flex, row, space-around, none, wrap);
+            gap: 50px;
+            margin-left: 20px;
+            .contenedor-fotos{
                 .texto-foto{
                     @extend %texto-foto;
                     color: $negro;
@@ -21,20 +24,25 @@
                     }
                 }
             }
-    }
-        .rectangulo2{
-            @extend %estilo-ver-mas;
-            background-color: $blanco;
-            margin: 50px 500px;
-            .ver_mas{
-                list-style-type: none;
-                text-decoration: none;
-                color: map-get($color, quinario);
-                .texto-ver-mas{
-                    @include flex(flex, row, center, center, wrap);
-                    font-weight: 600;
-                    margin-top: 10px;
+        }
+        .contenedor-boton{
+            display: flex;
+            justify-content: center;
+            margin: 50px 0px;
+            .rectangulo2{
+                @extend %estilo-ver-mas;
+                background-color: $blanco;
+                .ver_mas{
+                    list-style-type: none;
+                    text-decoration: none;
+                    color: map-get($color, quinario);
+                    .texto-ver-mas{
+                        @include flex(flex, row, center, center, wrap);
+                        font-weight: 600;
+                        margin-top: 10px;
+                    }
                 }
             }
         }
+    }
 }
