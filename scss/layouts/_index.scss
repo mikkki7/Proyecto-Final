@@ -15,6 +15,7 @@
     }
 }
 .main-index{
+    background-image: url(../../images/fondo\ salon.webp);
     @include flex(flex, column, center, none, wrap);
     padding-top: 100px;
     .contenedor-index{

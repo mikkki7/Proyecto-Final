@@ -24,6 +24,7 @@
         }
     }
     .main-productos{
+        background-image: url(../../images/fondo\ salon.webp);
         grid-area: main;
         @include flex(flex, row, center, none, wrap);
         padding-top: 100px;

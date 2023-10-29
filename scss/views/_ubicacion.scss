@@ -16,6 +16,7 @@
 }
 .main-ubicacion{
     padding-top: 150px;
+    background-image: url(../../images/fondo\ salon.webp);
     .contenedor-titulo{
         margin-top: 75px;
         .titulo{
@@ -25,7 +26,7 @@
     }
     .contenedor-ubicacion{
         margin-top: 100px;
-        margin-bottom: 100px;
+        padding-bottom: 100px;
         .texto-ubicacion{
             .contenedor-TiUb{
                 @include flex(flex, row, start, none, nowrap);

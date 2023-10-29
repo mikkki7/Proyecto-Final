@@ -66,6 +66,7 @@
 }
 
 .main-index {
+  background-image: url(../../images/fondo\ salon.webp);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -151,6 +152,7 @@
   height: 35px;
 }
 .body-productos .main-productos {
+  background-image: url(../../images/fondo\ salon.webp);
   grid-area: main;
   display: flex;
   flex-direction: row;
@@ -278,8 +280,9 @@
 }
 
 .main-servicios {
+  background-image: url(../../images/fondo\ salon.webp);
   padding-top: 200px;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 .main-servicios .contenedor-titulo .titulo-servicios {
   color: #2465aa;
@@ -370,6 +373,7 @@
   height: 35px;
 }
 .body-contacto .main-contacto {
+  background-image: url(../../images/fondo\ salon.webp);
   grid-area: main;
 }
 .body-contacto .main-contacto .contenedor-TiCo .titulo-contacto {
@@ -461,6 +465,7 @@
 
 .main-ubicacion {
   padding-top: 150px;
+  background-image: url(../../images/fondo\ salon.webp);
 }
 .main-ubicacion .contenedor-titulo {
   margin-top: 75px;
@@ -470,7 +475,7 @@
 }
 .main-ubicacion .contenedor-ubicacion {
   margin-top: 100px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 .main-ubicacion .contenedor-ubicacion .texto-ubicacion .contenedor-TiUb {
   display: flex;

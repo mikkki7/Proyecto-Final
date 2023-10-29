@@ -15,8 +15,9 @@
     }
 }
 .main-servicios{
+    background-image: url(../../images/fondo\ salon.webp);
     padding-top: 200px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     .contenedor-titulo{
         .titulo-servicios{
             @extend %titulo-general;
