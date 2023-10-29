@@ -1,10 +1,10 @@
-.main-ubicacion .contenedor-titulo .titulo, .body-contacto .main-contacto .contenedor-TiCo .titulo-contacto, .main-servicios .titulo-servicios, .body-productos .main-productos .contenedor-titulo .titulo, .main-index .contenedor-index .contenedor-titulo .titulo {
+.main-ubicacion .contenedor-titulo .titulo, .body-contacto .main-contacto .contenedor-TiCo .titulo-contacto, .main-servicios .contenedor-titulo .titulo-servicios, .body-productos .main-productos .contenedor-titulo .titulo, .main-index .contenedor-index .contenedor-titulo .titulo {
   text-align: center;
   font-size: xx-large;
   text-decoration: underline;
 }
 
-.main-servicios .articulo2 .imagen-servicios2, .main-servicios .articulo .imagen-servicios, .body-productos .main-productos .seccion-productos .texto-foto .imagen, .main-index .contenedor-index .seccion-index .contenedor-fotos .texto-foto .imagen {
+.main-servicios .contenedor-articulos .articulo2 .imagen-servicios2, .main-servicios .contenedor-articulos .articulo .imagen-servicios, .body-productos .main-productos .seccion-productos .texto-foto .imagen, .main-index .contenedor-index .seccion-index .contenedor-fotos .texto-foto .imagen {
   border-radius: 15px;
   border-style: solid;
   border-width: 4px;
@@ -46,6 +46,23 @@
   height: 100px;
   width: 100px;
   margin-left: 50px;
+}
+
+.contenedor-icono-wpp {
+  background-color: #25d366;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  text-align: center;
+  bottom: 10px;
+  right: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.contenedor-icono-wpp .icono-wpp {
+  margin-top: 5px;
+  width: 35px;
+  height: 35px;
 }
 
 .main-index {
@@ -117,6 +134,22 @@
   grid-template-rows: 7% auto 10%;
   grid-template-areas: "header header" "aside main" "footer footer";
 }
+.body-productos .contenedor-icono-wpp {
+  background-color: #25d366;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  text-align: center;
+  bottom: 10px;
+  right: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.body-productos .contenedor-icono-wpp .icono-wpp {
+  margin-top: 5px;
+  width: 35px;
+  height: 35px;
+}
 .body-productos .main-productos {
   grid-area: main;
   display: flex;
@@ -171,6 +204,11 @@
   font-weight: 600;
   margin-top: 10px;
 }
+.body-productos .main-productos .icono-wpp {
+  position: fixed;
+  top: 225px;
+  right: 30px;
+}
 .body-productos .aside {
   height: 100%;
   background-color: #6599e3;
@@ -222,14 +260,31 @@
   border: 3px solid rgb(12, 12, 12);
 }
 
+.contenedor-icono-wpp {
+  background-color: #25d366;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  text-align: center;
+  bottom: 10px;
+  right: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.contenedor-icono-wpp .icono-wpp {
+  margin-top: 5px;
+  width: 35px;
+  height: 35px;
+}
+
 .main-servicios {
   padding-top: 200px;
   margin-bottom: 50px;
 }
-.main-servicios .titulo-servicios {
+.main-servicios .contenedor-titulo .titulo-servicios {
   color: #2465aa;
 }
-.main-servicios .articulo {
+.main-servicios .contenedor-articulos .articulo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -238,26 +293,26 @@
   margin-top: 175px;
   margin-bottom: 100px;
 }
-.main-servicios .articulo .contenedor-texto {
+.main-servicios .contenedor-articulos .articulo .contenedor-texto {
   margin: 0px 25px;
   width: 40%;
 }
-.main-servicios .articulo .contenedor-texto .subtitulo-servicios {
+.main-servicios .contenedor-articulos .articulo .contenedor-texto .subtitulo-servicios {
   color: #4f88d0;
   text-decoration: underline;
   text-align: start;
 }
-.main-servicios .articulo .contenedor-texto .texto-servicios {
+.main-servicios .contenedor-articulos .articulo .contenedor-texto .texto-servicios {
   font-size: large;
   margin-top: 50px;
   line-height: 30px;
 }
-.main-servicios .articulo .imagen-servicios {
+.main-servicios .contenedor-articulos .articulo .imagen-servicios {
   border-color: #6599e3;
   margin-right: 25px;
   width: 40%;
 }
-.main-servicios .articulo2 {
+.main-servicios .contenedor-articulos .articulo2 {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -266,25 +321,30 @@
   margin-top: 175px;
   margin-bottom: 100px;
 }
-.main-servicios .articulo2 .contenedor-texto2 {
+.main-servicios .contenedor-articulos .articulo2 .contenedor-texto2 {
   width: 40%;
   margin-right: 150px;
 }
-.main-servicios .articulo2 .contenedor-texto2 .subtitulo-servicios {
+.main-servicios .contenedor-articulos .articulo2 .contenedor-texto2 .subtitulo-servicios {
   color: #4f88d0;
   text-decoration: underline;
   text-align: start;
 }
-.main-servicios .articulo2 .contenedor-texto2 .texto-servicios {
+.main-servicios .contenedor-articulos .articulo2 .contenedor-texto2 .texto-servicios {
   font-size: large;
   margin-top: 50px;
   line-height: 30px;
 }
-.main-servicios .articulo2 .imagen-servicios2 {
+.main-servicios .contenedor-articulos .articulo2 .imagen-servicios2 {
   width: 40%;
   border-color: #6599e3;
   margin-left: 25px;
   margin-right: 25px;
+}
+.main-servicios .icono-wpp {
+  position: fixed;
+  top: 195px;
+  right: 30px;
 }
 
 .body-contacto {
@@ -292,6 +352,22 @@
   grid-template-columns: 25% 75%;
   grid-template-rows: 10% auto 10%;
   grid-template-areas: "header header" "aside main" "footer footer";
+}
+.body-contacto .contenedor-icono-wpp {
+  background-color: #25d366;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  text-align: center;
+  bottom: 10px;
+  right: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.body-contacto .contenedor-icono-wpp .icono-wpp {
+  margin-top: 5px;
+  width: 35px;
+  height: 35px;
 }
 .body-contacto .main-contacto {
   grid-area: main;
@@ -318,7 +394,7 @@
   margin-bottom: 5px;
 }
 .body-contacto .main-contacto .contenedor-formulario .formulario .inputs-datos .contenedor-inputs .ingreso-datos {
-  width: 325%;
+  width: 320%;
   padding: 10px;
   background-color: transparent;
   border: 2px solid #3a76bd;
@@ -364,6 +440,23 @@
   line-height: 30px;
   margin-top: 25px;
   margin: 30px;
+}
+
+.contenedor-icono-wpp {
+  background-color: #25d366;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  text-align: center;
+  bottom: 10px;
+  right: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.contenedor-icono-wpp .icono-wpp {
+  margin-top: 5px;
+  height: 35px;
+  width: 35px;
 }
 
 .main-ubicacion {
@@ -418,9 +511,24 @@
 .main-ubicacion .contenedor-ubicacion .iframes .mapa {
   border: 3px solid #2465aa;
 }
+.main-ubicacion .icono-wpp {
+  position: fixed;
+  top: 220px;
+  right: 30px;
+}
 
 /*Media Queries Inicio*/
 @media (min-width: 320px) and (max-width: 480px) {
+  .contenedor-icono-wpp {
+    width: 45px;
+    height: 45px;
+    right: 5px;
+  }
+  .contenedor-icono-wpp .icono-wpp {
+    width: 30px;
+    height: 30px;
+    margin-right: 1px;
+  }
   .main-index {
     display: flex;
     flex-wrap: wrap;
@@ -438,7 +546,7 @@
     justify-content: center;
     margin-left: 0px;
   }
-  .main-index .rectangulo2 {
+  .main-index .contenedor-boton .rectangulo2 {
     margin: 50px 0px 50px 35px;
   }
 }
@@ -449,6 +557,16 @@
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: "header" "aside" "main" "footer";
+  }
+  .body-productos .contenedor-icono-wpp {
+    width: 45px;
+    height: 45px;
+    right: 5px;
+  }
+  .body-productos .contenedor-icono-wpp .icono-wpp {
+    width: 30px;
+    height: 30px;
+    margin-left: 1px;
   }
   .body-productos .main-productos .contenedor-titulo .titulo {
     margin-bottom: 125px;
@@ -473,6 +591,17 @@
 }
 /*Media Queries Servicios*/
 @media (min-width: 320px) and (max-width: 480px) {
+  .contenedor-icono-wpp {
+    width: 40px;
+    height: 40px;
+    right: 9px;
+    bottom: 20px;
+  }
+  .contenedor-icono-wpp .icono-wpp {
+    width: 25px;
+    height: 25px;
+    margin-left: 2px;
+  }
   .main-servicios {
     padding-top: 125px;
   }
@@ -522,6 +651,16 @@
     grid-template-rows: auto auto auto auto;
     grid-template-areas: "header" "aside" "main" "footer";
   }
+  .body-contacto .contenedor-icono-wpp {
+    width: 40px;
+    height: 40px;
+    right: 5px;
+  }
+  .body-contacto .contenedor-icono-wpp .icono-wpp {
+    width: 25px;
+    height: 25px;
+    margin-left: 1px;
+  }
   .body-contacto .main-contacto .contenedor-formulario {
     justify-content: center;
     margin-top: 65px;
@@ -544,8 +683,18 @@
 }
 /*Media Queries Ubicacion*/
 @media (min-width: 320px) and (max-width: 480px) {
+  .contenedor-icono-wpp {
+    width: 45px;
+    height: 45px;
+    right: 5px;
+  }
+  .contenedor-icono-wpp .icono-wpp {
+    width: 30px;
+    height: 30px;
+    margin-right: 1px;
+  }
   .main-ubicacion {
-    padding-top: 200px;
+    padding-top: 150px;
   }
   .main-ubicacion .contenedor-titulo .titulo {
     font-size: xx-large;

@@ -1,5 +1,15 @@
 /*Media Queries Inicio*/
 @media (min-width: 320px) and (max-width: 480px) {
+    .contenedor-icono-wpp{
+        width: 45px;
+        height: 45px;
+        right: 5px;
+        .icono-wpp{
+            width: 30px;
+            height: 30px;
+            margin-right: 1px;
+        }
+    }
     .main-index{
         display: flex;
         flex-wrap: wrap;
@@ -18,9 +28,11 @@
                 margin-left: 0px;
             }
         }
-        .rectangulo2{
-            margin: 50px 0px 50px 35px;
-        }
+            .contenedor-boton{
+                .rectangulo2{
+                    margin: 50px 0px 50px 35px;
+                }
+            }
     }
 }
 
@@ -36,6 +48,16 @@
         "main"
         "footer"
         ;
+        .contenedor-icono-wpp{
+            width: 45px;
+            height: 45px;
+            right: 5px;
+            .icono-wpp{
+                width: 30px;
+                height: 30px;
+                margin-left: 1px;
+            }
+        }
         .main-productos{
             .contenedor-titulo{
                 .titulo{
@@ -65,6 +87,17 @@
 
 /*Media Queries Servicios*/
 @media (min-width: 320px) and (max-width: 480px){
+    .contenedor-icono-wpp{
+        width: 40px;
+        height: 40px;
+        right: 9px;
+        bottom: 20px;
+        .icono-wpp{
+            width: 25px;
+            height: 25px;
+            margin-left: 2px;
+        }
+    }
     .main-servicios{
         padding-top: 125px;
         .contenedor-titulo{
@@ -123,6 +156,16 @@
         "main"
         "footer"
         ;
+        .contenedor-icono-wpp{
+            width: 40px;
+            height: 40px;
+            right: 5px;
+            .icono-wpp{
+                width: 25px;
+                height: 25px;
+                margin-left: 1px;
+            }
+        }
         .main-contacto{
             .contenedor-formulario{
                 justify-content: center;
@@ -157,8 +200,18 @@
 
 /*Media Queries Ubicacion*/
 @media (min-width: 320px) and (max-width: 480px){
+    .contenedor-icono-wpp{
+        width: 45px;
+        height: 45px;
+        right: 5px;
+        .icono-wpp{
+            width: 30px;
+            height: 30px;
+            margin-right: 1px;
+        }
+    }
     .main-ubicacion{
-        padding-top: 200px;
+        padding-top: 150px;
         .contenedor-titulo{
             .titulo{
                 font-size: xx-large;
