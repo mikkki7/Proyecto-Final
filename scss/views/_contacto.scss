@@ -8,24 +8,9 @@
     "aside main"
     "footer footer"
     ;
-    .contenedor-icono-wpp{
-        background-color: #25d366;
-        width: 50px;
-        height: 50px;
-        position: fixed;
-        text-align: center;
-        bottom: 10px;
-        right: 20px;
-        border-radius: 50%;
-        border: 2px solid black;
-        .icono-wpp{
-            margin-top: 5px;
-            width: 35px;
-            height: 35px;
-        }
-    }
     .main-contacto{
-        background-image: url(../../images/fondo\ salon.webp);
+        background: url(../../images/fondo\ salon.webp) no-repeat center center fixed;
+        background-size: cover;
         grid-area: main;
         .contenedor-TiCo{
             .titulo-contacto{
@@ -59,19 +44,27 @@
             }
         }
     }
-        .contenedor-Bot-En{
-            @include flex(flex, row, center, none, wrap);
-            .rectangulo-Bot-En{
-                .boton-enviar{
-                    background-color: transparent;
-                    color: map-get($color, terciario);
-                    border: $borde-boton;
-                    border-radius: 20px;
-                    padding: 10px;
-                    @include flex(flex, row, center, none, nowrap);
-                }
+    .contenedor-Bot-En{
+        @include flex(flex, row, center, none, wrap);
+        .rectangulo-Bot-En{
+            .boton-enviar{
+                background-color: transparent;
+                color: map-get($color, terciario);
+                border: $borde-boton;
+                border-radius: 20px;
+                padding: 10px;
+                @include flex(flex, row, center, none, nowrap);
             }
         }
+        .contenedor-icono-wpp{
+            @extend %estilo-compra;
+            .icono-wpp{
+                margin-top: 5px;
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
     .aside{
         grid-area: aside;
         background-color: map-get($color, secundario);

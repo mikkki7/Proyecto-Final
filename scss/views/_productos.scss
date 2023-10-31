@@ -8,15 +8,7 @@
         "footer footer"
     ;
     .contenedor-icono-wpp{
-        background-color: #25d366;
-        width: 50px;
-        height: 50px;
-        position: fixed;
-        text-align: center;
-        bottom: 10px;
-        right: 20px;
-        border-radius: 50%;
-        border: 2px solid black;
+        @extend %estilo-compra;
         .icono-wpp{
             margin-top: 5px;
             width: 35px;
@@ -24,7 +16,8 @@
         }
     }
     .main-productos{
-        background-image: url(../../images/fondo\ salon.webp);
+        background: url(../../images/fondo\ salon.webp) no-repeat center center fixed;
+        background-size: cover;
         grid-area: main;
         @include flex(flex, row, center, none, wrap);
         padding-top: 100px;
@@ -40,6 +33,7 @@
             gap: 10px;
             margin-left: 20px;
             margin-bottom: 50px;
+            .contenedor-imagenes{
                 .texto-foto{
                     @extend %texto-foto;
                     color: $negro;
@@ -47,7 +41,37 @@
                         @extend %estilo-imagen;
                         border-color: map-get($color, secundario);
                     }
+                    .contenedor-compra{
+                        .rectangulo-compra1{
+                            @include flex(flex, row, center, center, wrap);
+                            width: auto;
+                            height: 75px;
+                            background-color: map-get($color, secundario);
+                            .texto1{
+                                margin-top: 10px;
+                                font-weight: bold;
+                            }
+                        }
+                        .rectangulo-compra2{
+                            @include flex(flex, row, space-evenly, center, wrap);
+                            width: auto;
+                            height: 75px;
+                            background-color: black;
+                            border-bottom-left-radius: 25px;
+                            border-bottom-right-radius: 25px;
+                            .icono-carro{
+                                width: 30px;
+                                height: 30px;
+                                margin-left: 5px;
+                            }
+                            .texto2{
+                                color: $blanco;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
                 }
+            }
         }
         .contenedor-boton{
             @include flex(flex, row, center, none, wrap);
@@ -114,9 +138,15 @@
                     margin-top: 10px;
                     margin-bottom: 10px;
                     border: $borde-negro;
+                    padding: 5px;
+                    width: 150%;
+                    border-radius: 10px;
                 }
                 .input-maximo{
                     border: $borde-negro;
+                    padding: 5px;
+                    width: 150%;
+                    border-radius: 10px;
                 }
             }
         }

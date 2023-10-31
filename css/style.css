@@ -4,13 +4,12 @@
   text-decoration: underline;
 }
 
-.main-servicios .contenedor-articulos .articulo2 .imagen-servicios2, .main-servicios .contenedor-articulos .articulo .imagen-servicios, .body-productos .main-productos .seccion-productos .texto-foto .imagen, .main-index .contenedor-index .seccion-index .contenedor-fotos .texto-foto .imagen {
-  border-radius: 15px;
+.main-servicios .contenedor-articulos .articulo2 .imagen-servicios2, .main-servicios .contenedor-articulos .articulo .imagen-servicios, .body-productos .main-productos .seccion-productos .contenedor-imagenes .texto-foto .imagen, .main-index .contenedor-index .seccion-index .contenedor-fotos .texto-foto .imagen {
   border-style: solid;
   border-width: 4px;
 }
 
-.body-productos .main-productos .seccion-productos .texto-foto, .main-index .contenedor-index .seccion-index .contenedor-fotos .texto-foto {
+.body-productos .main-productos .seccion-productos .contenedor-imagenes .texto-foto, .main-index .contenedor-index .seccion-index .contenedor-fotos .texto-foto {
   text-decoration: none;
   text-align: center;
   font-size: medium;
@@ -22,6 +21,18 @@
   height: 50px;
   width: 250px;
   border-radius: 20px;
+}
+
+.body-contacto .contenedor-Bot-En .contenedor-icono-wpp, .contenedor-icono-wpp, .body-productos .contenedor-icono-wpp, .main-index .contenedor-icono-wpp {
+  background-color: #25d366;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  text-align: center;
+  bottom: 10px;
+  right: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
 }
 
 @font-face {
@@ -48,31 +59,15 @@
   margin-left: 50px;
 }
 
-.contenedor-icono-wpp {
-  background-color: #25d366;
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  text-align: center;
-  bottom: 10px;
-  right: 20px;
-  border-radius: 50%;
-  border: 2px solid black;
-}
-.contenedor-icono-wpp .icono-wpp {
-  margin-top: 5px;
-  width: 35px;
-  height: 35px;
-}
-
 .main-index {
-  background-image: url(../../images/fondo\ salon.webp);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: none;
   flex-wrap: wrap;
   padding-top: 100px;
+  background: url(../../images/fondo\ salon.webp) no-repeat center center fixed;
+  background-size: cover;
 }
 .main-index .contenedor-index .contenedor-titulo .titulo {
   color: #2465aa;
@@ -92,6 +87,41 @@
 }
 .main-index .contenedor-index .seccion-index .contenedor-fotos .texto-foto .imagen {
   border-color: #6599e3;
+}
+.main-index .contenedor-index .seccion-index .contenedor-fotos .texto-foto .contenedor-compra .rectangulo-compra1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: auto;
+  height: 75px;
+  background-color: #6599e3;
+}
+.main-index .contenedor-index .seccion-index .contenedor-fotos .texto-foto .contenedor-compra .rectangulo-compra1 .texto1 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.main-index .contenedor-index .seccion-index .contenedor-fotos .texto-foto .contenedor-compra .rectangulo-compra2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: auto;
+  height: 75px;
+  background-color: black;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.main-index .contenedor-index .seccion-index .contenedor-fotos .texto-foto .contenedor-compra .rectangulo-compra2 .icono-carro {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
+.main-index .contenedor-index .seccion-index .contenedor-fotos .texto-foto .contenedor-compra .rectangulo-compra2 .texto2 {
+  color: white;
+  margin-top: 10px;
 }
 .main-index .contenedor-index .contenedor-boton {
   display: flex;
@@ -118,6 +148,11 @@
   font-weight: 600;
   margin-top: 10px;
 }
+.main-index .contenedor-icono-wpp .icono-wpp {
+  margin-top: 5px;
+  width: 35px;
+  height: 35px;
+}
 
 .footer {
   grid-area: footer;
@@ -135,24 +170,14 @@
   grid-template-rows: 7% auto 10%;
   grid-template-areas: "header header" "aside main" "footer footer";
 }
-.body-productos .contenedor-icono-wpp {
-  background-color: #25d366;
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  text-align: center;
-  bottom: 10px;
-  right: 20px;
-  border-radius: 50%;
-  border: 2px solid black;
-}
 .body-productos .contenedor-icono-wpp .icono-wpp {
   margin-top: 5px;
   width: 35px;
   height: 35px;
 }
 .body-productos .main-productos {
-  background-image: url(../../images/fondo\ salon.webp);
+  background: url(../../images/fondo\ salon.webp) no-repeat center center fixed;
+  background-size: cover;
   grid-area: main;
   display: flex;
   flex-direction: row;
@@ -175,11 +200,46 @@
   margin-left: 20px;
   margin-bottom: 50px;
 }
-.body-productos .main-productos .seccion-productos .texto-foto {
+.body-productos .main-productos .seccion-productos .contenedor-imagenes .texto-foto {
   color: black;
 }
-.body-productos .main-productos .seccion-productos .texto-foto .imagen {
+.body-productos .main-productos .seccion-productos .contenedor-imagenes .texto-foto .imagen {
   border-color: #6599e3;
+}
+.body-productos .main-productos .seccion-productos .contenedor-imagenes .texto-foto .contenedor-compra .rectangulo-compra1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: auto;
+  height: 75px;
+  background-color: #6599e3;
+}
+.body-productos .main-productos .seccion-productos .contenedor-imagenes .texto-foto .contenedor-compra .rectangulo-compra1 .texto1 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.body-productos .main-productos .seccion-productos .contenedor-imagenes .texto-foto .contenedor-compra .rectangulo-compra2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: auto;
+  height: 75px;
+  background-color: black;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.body-productos .main-productos .seccion-productos .contenedor-imagenes .texto-foto .contenedor-compra .rectangulo-compra2 .icono-carro {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
+.body-productos .main-productos .seccion-productos .contenedor-imagenes .texto-foto .contenedor-compra .rectangulo-compra2 .texto2 {
+  color: white;
+  margin-top: 10px;
 }
 .body-productos .main-productos .contenedor-boton {
   display: flex;
@@ -256,23 +316,18 @@
 .body-productos .aside .contenedor-precios .input-precios .input-minimo {
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 3px solid rgb(12, 12, 12);
+  border: 2px solid rgb(12, 12, 12);
+  padding: 5px;
+  width: 150%;
+  border-radius: 10px;
 }
 .body-productos .aside .contenedor-precios .input-precios .input-maximo {
-  border: 3px solid rgb(12, 12, 12);
+  border: 2px solid rgb(12, 12, 12);
+  padding: 5px;
+  width: 150%;
+  border-radius: 10px;
 }
 
-.contenedor-icono-wpp {
-  background-color: #25d366;
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  text-align: center;
-  bottom: 10px;
-  right: 20px;
-  border-radius: 50%;
-  border: 2px solid black;
-}
 .contenedor-icono-wpp .icono-wpp {
   margin-top: 5px;
   width: 35px;
@@ -280,7 +335,8 @@
 }
 
 .main-servicios {
-  background-image: url(../../images/fondo\ salon.webp);
+  background: url(../../images/fondo\ salon.webp) no-repeat center center fixed;
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 50px;
 }
@@ -356,24 +412,9 @@
   grid-template-rows: 10% auto 10%;
   grid-template-areas: "header header" "aside main" "footer footer";
 }
-.body-contacto .contenedor-icono-wpp {
-  background-color: #25d366;
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  text-align: center;
-  bottom: 10px;
-  right: 20px;
-  border-radius: 50%;
-  border: 2px solid black;
-}
-.body-contacto .contenedor-icono-wpp .icono-wpp {
-  margin-top: 5px;
-  width: 35px;
-  height: 35px;
-}
 .body-contacto .main-contacto {
-  background-image: url(../../images/fondo\ salon.webp);
+  background: url(../../images/fondo\ salon.webp) no-repeat center center fixed;
+  background-size: cover;
   grid-area: main;
 }
 .body-contacto .main-contacto .contenedor-TiCo .titulo-contacto {
@@ -423,6 +464,11 @@
   align-items: none;
   flex-wrap: nowrap;
 }
+.body-contacto .contenedor-Bot-En .contenedor-icono-wpp .icono-wpp {
+  margin-top: 5px;
+  width: 35px;
+  height: 35px;
+}
 .body-contacto .aside {
   grid-area: aside;
   background-color: #6599e3;
@@ -446,17 +492,6 @@
   margin: 30px;
 }
 
-.contenedor-icono-wpp {
-  background-color: #25d366;
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  text-align: center;
-  bottom: 10px;
-  right: 20px;
-  border-radius: 50%;
-  border: 2px solid black;
-}
 .contenedor-icono-wpp .icono-wpp {
   margin-top: 5px;
   height: 35px;
@@ -465,7 +500,8 @@
 
 .main-ubicacion {
   padding-top: 150px;
-  background-image: url(../../images/fondo\ salon.webp);
+  background: url(../../images/fondo\ salon.webp) no-repeat center center fixed;
+  background-size: cover;
 }
 .main-ubicacion .contenedor-titulo {
   margin-top: 75px;
