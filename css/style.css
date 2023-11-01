@@ -183,7 +183,7 @@
   margin-top: 10px;
 }
 .main-index .contenedor-icono-wpp:hover {
-  background-color: #29ec71;
+  background-color: #29e76f;
 }
 .main-index .contenedor-icono-wpp .icono-wpp {
   width: 30px;
@@ -282,6 +282,9 @@
 .body-productos .main-productos .seccion-productos .contenedor-imagenes .contenedor-compra .rectangulo-compra1 .texto-foto {
   margin-top: 0px;
 }
+.body-productos .main-productos .seccion-productos .contenedor-imagenes .contenedor-compra .rectangulo-compra1 .texto-foto:hover {
+  text-decoration: underline;
+}
 .body-productos .main-productos .seccion-productos .contenedor-imagenes .contenedor-compra .rectangulo-compra1 .texto1 {
   margin-bottom: 10px;
   font-weight: bold;
@@ -301,6 +304,9 @@
 .body-productos .main-productos .seccion-productos .contenedor-imagenes .contenedor-compra .rectangulo-compra2 .texto-foto {
   margin: 0px;
   margin-top: 10px;
+}
+.body-productos .main-productos .seccion-productos .contenedor-imagenes .contenedor-compra .rectangulo-compra2 .texto-foto :hover {
+  text-decoration: underline;
 }
 .body-productos .main-productos .seccion-productos .contenedor-imagenes .contenedor-compra .rectangulo-compra2 .texto-foto .icono-carro {
   width: 30px;

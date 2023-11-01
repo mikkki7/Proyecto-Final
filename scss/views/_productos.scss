@@ -74,6 +74,9 @@
                             background-color: map-get($color, secundario);
                             .texto-foto{
                                 margin-top: 0px;
+                                &:hover{
+                                    text-decoration: underline;
+                                }
                             }
                             .texto1{
                                 margin-bottom: 10px;
@@ -91,6 +94,9 @@
                                 @extend %texto-foto;
                                 margin: 0px;
                                 margin-top: 10px;
+                                :hover{
+                                    text-decoration: underline;
+                                }
                                 .icono-carro{
                                     width: 30px;
                                     height: 30px;
