@@ -5,8 +5,8 @@
         height: 45px;
         right: 5px;
         .icono-wpp{
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             margin-right: 1px;
         }
     }
@@ -53,8 +53,8 @@
             height: 45px;
             right: 5px;
             .icono-wpp{
-                width: 30px;
-                height: 30px;
+                width: 25px;
+                height: 25px;
                 margin-left: 1px;
             }
         }
@@ -88,8 +88,8 @@
 /*Media Queries Servicios*/
 @media (min-width: 320px) and (max-width: 480px){
     .contenedor-icono-wpp{
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
         right: 9px;
         bottom: 20px;
         .icono-wpp{
@@ -157,9 +157,10 @@
         "footer"
         ;
         .contenedor-icono-wpp{
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             right: 5px;
+            bottom: 6px;
             .icono-wpp{
                 width: 25px;
                 height: 25px;
@@ -204,9 +205,10 @@
         width: 45px;
         height: 45px;
         right: 5px;
+        bottom: 6px;
         .icono-wpp{
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             margin-right: 1px;
         }
     }
