@@ -1,8 +1,18 @@
 .main-index{
     @include flex(flex, column, center, none, wrap);
     padding-top: 100px;
-    background: url(../../images/fondo\ salon.webp) no-repeat center center fixed;
-    background-size: cover;
+    &::before{
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../../images/fondo\ salon.webp) no-repeat center center fixed;
+        background-size: cover;
+        opacity: 0.4;
+        z-index: -1;
+    }
     .contenedor-index{
         .contenedor-titulo{
             .titulo{
@@ -16,43 +26,61 @@
             gap: 50px;
             margin-left: 20px;
             .contenedor-fotos{
+                overflow: hidden;
                 .texto-foto{
                     @extend %texto-foto;
                     color: $negro;
+                    :hover{
+                        text-decoration: underline;
+                    }
                     .imagen{
                         @extend %estilo-imagen;
                         border-color: map-get($color, secundario);
+                        transition: 1s;
+                        object-fit: cover;
+                        &:hover{
+                            transform: scale(1.1);
+                            cursor: pointer;
+                            filter: blur(1.2px);
+                        }
                     }
+                }
                     .contenedor-compra{
                         .rectangulo-compra1{
                             @include flex(flex, row, center, center, wrap);
                             width: auto;
                             height: 75px;
                             background-color: map-get($color, secundario);
+                            .texto-foto{
+                                margin-top: 0px;
+                            }
                             .texto1{
-                                margin-top: 10px;
                                 font-weight: bold;
+                                margin-bottom: 10px;
                             }
                         }
                         .rectangulo-compra2{
                             @include flex(flex, row, space-evenly, center, wrap);
                             width: auto;
                             height: 75px;
-                            background-color: black;
+                            background-color: $negro;
                             border-bottom-left-radius: 25px;
                             border-bottom-right-radius: 25px;
-                            .icono-carro{
-                                width: 30px;
-                                height: 30px;
-                                margin-left: 5px;
-                            }
-                            .texto2{
-                                color: $blanco;
+                            .texto-foto{
+                                @extend %texto-foto;
+                                margin: 0px;
                                 margin-top: 10px;
+                                .icono-carro{
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                                .texto2{
+                                    color: $blanco;
+                                    margin-left: 10px;
+                                }
                             }
                         }
                     }
-                }
             }
         }
         .contenedor-boton{
@@ -60,11 +88,14 @@
             margin: 50px 0px;
             .rectangulo2{
                 @extend %estilo-ver-mas;
-                background-color: $blanco;
+                background-color: map-get($color, secundario);
+                &:hover{
+                    background-color: $sombreado-blanco;
+                }
                 .ver_mas{
                     list-style-type: none;
                     text-decoration: none;
-                    color: map-get($color, cuartenario);
+                    color: $negro;
                     .texto-ver-mas{
                         @include flex(flex, row, center, center, wrap);
                         font-weight: 600;
@@ -76,10 +107,13 @@
     }
     .contenedor-icono-wpp{
         @extend %estilo-compra;
+        &:hover{
+            background-color: #29ec71;
+        }
         .icono-wpp{
-            margin-top: 5px;
-            width: 35px;
-            height: 35px;
+            width: 30px;
+            height: 30px;
+            margin-top: 10px;
         }
     }
 }

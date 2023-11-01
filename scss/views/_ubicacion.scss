@@ -1,24 +1,37 @@
 .contenedor-icono-wpp{
     @extend %estilo-compra;
+    &:hover{
+        background-color: #29ec71;
+    }
     .icono-wpp{
-        margin-top: 5px;
-        height: 35px;
-        width: 35px;
+        margin-top: 10px;
+        height: 30px;
+        width: 30px;
     }
 }
 .main-ubicacion{
     padding-top: 150px;
-    background: url(../../images/fondo\ salon.webp) no-repeat center center fixed;
-    background-size: cover;
+    &::before{
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../../images/fondo\ salon.webp) no-repeat center center fixed;
+        background-size: cover;
+        opacity: 0.4;
+        z-index: -1;
+    }
     .contenedor-titulo{
         margin-top: 75px;
+        margin-bottom: 100px;
         .titulo{
             @extend %titulo-general;
             color: map-get($color, quinario);
         }
     }
     .contenedor-ubicacion{
-        margin-top: 100px;
         padding-bottom: 100px;
         .texto-ubicacion{
             .contenedor-TiUb{
